@@ -20,15 +20,15 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rnn-Ly-ykg">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="9q6-z6-Ddr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="117" id="9q6-z6-Ddr" customClass="RecipeCell" customModule="recipez" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9q6-z6-Ddr" id="Dza-x1-aev">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="116.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zUN-7P-0lA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="116.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="117"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mums Happy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGH-wT-rrN">
                                                     <rect key="frame" x="8" y="48" width="584" height="21"/>
@@ -59,6 +59,10 @@
                                                 <constraint firstItem="MGH-wT-rrN" firstAttribute="centerY" secondItem="Dza-x1-aev" secondAttribute="centerY" id="fWB-am-9VD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeImg" destination="zUN-7P-0lA" id="e5o-AR-FPj"/>
+                                            <outlet property="recipeTitle" destination="MGH-wT-rrN" id="WhW-CI-p8s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
